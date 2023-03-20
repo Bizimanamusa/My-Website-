@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/59fbb2fbc2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
+            </ul>
+            <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Bizimana</span><br>Musa From Austin, TX</h1>
+        </div>
+    </div>
+</div>
+
+<!----------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="new.png.jpg">
+
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I currently attend Tarleton State University.
+                    I am majoring in computer science, with a concentraion
+                    in software engineering, and a mathematics minor. I am able
+                    to code in the following languages: C++, C, Python, Java, Html and css
+                    which is what was used to build this website. I have also taken 
+                    Data Structures. </p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Data Structure</span><br>Data Storage/ C Language</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2025</span><br>BBA from TSU Stephenville, TX</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------Portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="portfolio-list">
+            <div>
+                <i class="fa-brands fa-android"></i>
+                <h2>Gym Management App</h2>
+                <p>This software project will a user of the app
+                    to create a workout plan based on the work outs
+                    that have been put into the application. The progress 
+                    of each workout that is completed will stored and 
+                    can be accessed if needed. </p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera"></i>
+                <h2>Camera Motion Sensor System</h2>
+                <p>This is a project that allows a camera to record
+                    and detect the movements in a certain vicinity 
+                    regardless of how slight it is. It is built so that
+                    the user will iput a ocde to set it up. </p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-money-bills"></i>
+                <h2>Fingerprint Based ATM System</h2>
+                <p>This project allwas users to access their bank
+                    accounts via ATM with their fingerprints. It allows users to 
+                    perform serveral bank transactions like bank transfers, 
+                    cash withdrawals, and bank balance checks with their fingerprints
+                    and unique PIN. </p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>bizimana.musa@go.tarleton.edu</p>
+                <p><i class="fa-solid fa-square-phone"></i>(512) 988-4117</p>
+                <div class="social-icons">
+                    <a thref=""><i class="fa-brands fa-github"></i></i></a>
+                    <a thref="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a thref=""><i class="fa-brands fa-instagram"></i></a>
+                    <a thref=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a thref=""><i class="fa-brands fa-twitter"></i></a>
+    
+                </div>
+                <a href="Resume.docx - Google Docs.pdf"download class="btn btn2">Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows ="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>   
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Musa. Made with VS Code <i class="fa-regular fa-file-code"></i> HTML/CSS</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       
+    }
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyjPlplB2SNiCCyUXUYKPb_5J-LU_psIxqRsroYHrlaXVUewH1JhW1Nm__jxBogl9r_Iw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
